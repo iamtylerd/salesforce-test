@@ -2,12 +2,5 @@
 
 'use strict';
 
-const [,, ...args] = process.argv;
+require('./logic')
 
-
-let inputNum = () => {
-	console.log("Hello")
-}
-
-
-module.exports = inputNum();
