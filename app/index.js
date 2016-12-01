@@ -5,7 +5,7 @@
 
 
 const { argv: [,, ...args] } = process
-const { number } = require('./parse-args')(args)
+const number  = require('./parse-args')(args)
 const {inputNum} = require('./logic')
 
 // console.log(inputNum(number))
