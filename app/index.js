@@ -6,9 +6,22 @@
 
 const { argv: [,, ...args] } = process
 const number  = require('./parse-args')(args)
-const {inputNum} = require('./logic')
+const {inputNum, isSecretAdditive} = require('./logic')
 
-// console.log(inputNum(number))
+let primeNums = inputNum(number)
+let consoleOutput = isSecretAdditive(primeNums)
 
-inputNum(number)
+//every array method
 
+
+if (flatten(consoleOutput).indexOf(false) > -1) {
+	console.log("The secrect function is not additive")
+} else {
+	console.log("The secrect function is additive")
+}
+
+
+
+function flatten (arr) {
+	return [].concat(...arr)
+}

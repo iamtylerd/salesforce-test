@@ -1,12 +1,10 @@
 'use strict';
 
-
-
 module.exports.inputNum = (num) => {
-	// Eratosthenes algorithm to find all primes under n
+//Note of sieve of era
     let array = []
     let upperLimit = Math.sqrt(num)
-    let output = [];
+    let primes = [];
 
     for (var i = 0; i < num; i++) {
         array.push(true);
@@ -22,8 +20,23 @@ module.exports.inputNum = (num) => {
 
     for (var i = 2; i < num; i++) {
         if(array[i]) {
-            output.push(i);
+            primes.push(i);
         }
     }
-	console.log(output)
+	return primes
 };
+
+module.exports.isSecretAdditive = (primeArray) => {
+	let secret = (num) => {
+		// return Math.pow(num, 5);
+		return num;
+	}
+	let completedFunc = primeArray.slice(0, -1).map((first, i) => {
+		return primeArray.slice(i + 1).map((second) => {
+			return secret(first) + secret(second) == secret(first + second);
+
+		})
+
+	})
+	return completedFunc
+}

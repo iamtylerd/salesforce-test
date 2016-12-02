@@ -1,9 +1,10 @@
 'use strict';
 
 module.exports = (args) => {
-	if(args <1) {
-		process.stdout.write("Please enter an integer\n")
+	let number = +args
+	if(!Number.isInteger(number)) {
+		console.error("Please enter an integer")
+		process.exit(1)
 	}
-	let number = args[0]
 	return number
 }
