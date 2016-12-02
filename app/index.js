@@ -11,6 +11,10 @@ const {inputNum, isSecretAdditive} = require('./logic')
 let primeNums = inputNum(number)
 let consoleOutput = isSecretAdditive(primeNums)
 
+//Flattens the array one level and allows us to look for a false
+let flatten = (arr) => {
+	return [].concat(...arr)
+}
 
 
 //Check for a false from our additive function check
@@ -21,8 +25,4 @@ if (flatten(consoleOutput).indexOf(false) > -1) {
 }
 
 
-//Flattens the array one level and allows us to look for a false
-let flatten = (arr) => {
-	return [].concat(...arr)
-}
 
