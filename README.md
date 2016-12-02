@@ -1,6 +1,16 @@
 # Salesforce Code Test
 
+
+
 ### Installation
+
+Make sure you have node installed by running
+```sh
+node -v
+```
+If you do not have it installed, you can download it here
+https://nodejs.org/en/
+
 
 Install the dependencies and start the server.
 
